@@ -14,7 +14,7 @@ const Data = () => {
         console.log("Updating ID:", itemId);
         setData(prevData =>
             prevData.map(item =>
-                item.id === itemId ? { ...item, type: "Updated Type" } : item
+                item.id === itemId ? {type: "Updated Type" } : item
             )
         );
     }
