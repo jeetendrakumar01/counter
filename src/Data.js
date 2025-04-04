@@ -3,9 +3,10 @@ import datas from './datas.json';
 import './styles.css';
 
 const Data = () => {
-    const [data, setData] = useState(datas);
+     const [data, setData] = useState(datas);
+               console.log(data)
 
-    const Remove = (itemId) => {
+     const Remove = (itemId) => {
         console.log("Removing ID:", itemId);
         setData(prevData => prevData.filter(item => item.id !== itemId));
     }
@@ -14,12 +15,10 @@ const Data = () => {
         console.log("Updating ID:", itemId);
         setData(prevData =>
             prevData.map(item =>
-                item.id === itemId ? {type: "Updated Type" } : item
+                item.id === itemId ? {type: "Jeetendra Kumar" } : item
             )
-        );
-    }
-    
-    
+        )
+    } 
    return (
         <div className="data-container">
             {data.map(item => (
